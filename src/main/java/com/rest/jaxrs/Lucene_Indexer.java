@@ -57,7 +57,8 @@ public class Lucene_Indexer {
 			Collections.addAll(directories_to_be_index, search_config.getProperty("directories_to_be_searched").split(";"));
 			startIndexing();
 			input.close();
-			
+			index_writer.commit();
+			index_writer.close();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -71,13 +72,7 @@ public class Lucene_Indexer {
 			 //directory_to_be_indexed = FSDirectory.open(indexDirectoryPath);
 			indexDirectory( index_writer,new File(directory));
 			
-			try {
-				
-				index_writer.commit();
-				} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 			
 		}
 		

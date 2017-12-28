@@ -1,5 +1,4 @@
 com/rest/jaxrs/Lucene_Indexer.class
-Lucene_Searcher.class
 com/rest/jaxrs/FileSearchService.class
 com/rest/jaxrs/FileList.class
 com/rest/jaxrs/Lucene_Searcher.class
